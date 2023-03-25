@@ -1,0 +1,22 @@
+
+PROCEDURE insertion_sort (tab ARRAY_OF INTEGER)
+VAR
+    value,index INTEGER;
+    tab : ARRAY_OF INTEGER;
+BEGIN
+    FOR i FROM 1 TO tab.length-1 STEP 1  DO
+        value:= tab[i];
+        index:=i-1;
+        WHILE (index>=0) DO
+            
+            IF (value<tab[index]) THEN
+                tab[index+1]:=tab[index];
+               tab[index]:=value;
+               index:=index-1;
+            
+                
+
+            END_IF   
+        END_WHILE
+    END_FOR
+END
